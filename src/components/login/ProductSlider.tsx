@@ -71,10 +71,11 @@ const styles = StyleSheet.create({
         marginBottom:10
     },
     itemContainer:{
+        marginTop:10,
         marginBottom:12,
         marginHorizontal:10,
         width:screenWidth *0.26,
-        height:screenHeight *0.16,
+        height:screenHeight *0.12,
         backgroundColor:"#f4f4f4",
         justifyContent:'center',
         borderRadius:25,

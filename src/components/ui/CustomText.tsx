@@ -16,7 +16,7 @@ interface Props{
     "h8" |
     "h9" |
     "body";
-    fontFamily:Fonts;
+    fontFamily?:Fonts;
     fontSize?: number;
     style?: TextStyle | TextStyle[];
     children?: React.ReactNode;
@@ -76,9 +76,18 @@ const CustomText:FC<Props> =({
     return(
         <Text
         onLayout={onLayout}
+        style={[styles.text,{color:Colors.text,fontSize:computedFontSize},
+            fontFamilyStyle,style
+        ]}
+        numberOfLines={numberOfLines !== undefined?numberOfLines:undefined}
         >
-
+            {children}
         </Text>
     )
 }
 export default CustomText;
+const styles = StyleSheet.create({
+    text:{
+        textAlign:"left"
+    }
+})
